@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>UserInfo</title>
 </head>
 <body>
-
-
-<form th:method="post" th:action="@{/admin}" th:object="${messages}">
+<form th:method="post" th:action="@{/admin}" th:object="${person}">
 
     <input type="hidden" th:field="*{id}" readonly="readonly">
 
