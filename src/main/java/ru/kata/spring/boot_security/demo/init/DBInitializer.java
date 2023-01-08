@@ -28,11 +28,11 @@ public class DBInitializer {
     @Transactional
     @PostConstruct
     public void initDB() {
-        roleService.save(new Role("ADMIN"));
-        roleService.save(new Role("USER"));
+        roleService.save(new Role("ROLE_ADMIN"));
+        roleService.save(new Role("ROLE_USER"));
         userService.addUser(new User("admin", "admin@test.com", (byte) 45,
-                "admin", Set.of(new Role(1L, "ADMIN"))));
+                "admin", Set.of(new Role(1L, "ROLE_ADMIN"))));
         userService.addUser(new User("user", "user@test.com", (byte) 25,
-                "user", Set.of(new Role(2L,"USER"))));
+                "user", Set.of(new Role(2L,"ROLE_USER"))));
     }
 }
