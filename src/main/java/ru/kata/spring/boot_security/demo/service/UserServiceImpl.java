@@ -80,5 +80,4 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         userRepository.save(user);
     }
 
-    // Transactional ????
 }
